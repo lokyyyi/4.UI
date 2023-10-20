@@ -95,6 +95,7 @@ li.acls02#sidli{
 p,pre,strong,.acls02{
     color: lime;
 }
+    /*하위 선택자 */
 #last span{
     background-color: yellow;
 }
