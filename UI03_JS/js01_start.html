@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3. 외부작성 -->
+    <script type="text/javascript" src="./js/test.js"></script>
+
+    <!-- 2.내부작성 -->
+    <script type="text/javaScript">
+        function test() {
+            window.alert("embedded");
+            var doc = document.getElementsByTagName("li")[1];
+            doc.style.color="red";
+            doc.innerHTML="<b> 글자가 바뀝니다.</b>";
+        }
+    </script>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+    <dl>
+        <dt>자바스크립트</dt>
+        <dd>
+            웹 브라우저에서 많이 사용하는 인터프리터 방식의 객체지향 프로그래밍 언어이다. <br>
+            ECMA 스크립트 표준을 따르는 대표적인 웹 기술
+        </dd>
+        <dt>자바스크립트 사용방법</dt>
+        <dd>
+            <ol>
+                <li>태그에 직접 간단한 코드를 작성하여 실행되게 하는 방법</li>
+                <li>script 태그 영역에 작성해서 실행되게 하는 방법</li>
+                <li>외부의 js파일로 작성해서 가져다 사용하는 방법</li>
+            </ol>
+        </dd>
+    </dl>
+    <hr>
+    <!-- h1 태그를 클릭했을때 test()을 실행하여 'test3' 이라는 글자를 출력하는 alert()실행 -->
+    <h1 onclick="test3();">자바 스크립트 작성방식 3가지</h1>
+    <ol>
+        <!-- 1. inline -->
+        <li onclick="window.alert('inline');">inline방식</li>
+        <li onclick="test();">내부작성 방식</li>
+        <li onclick="test2();">외부작성 방식(*.js)</li>
+    </ol>
+</body>
+</html>

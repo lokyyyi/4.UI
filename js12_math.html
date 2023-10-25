@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function mathTest(){
+            //랜덤숫자(random(): 0~1난수발생)
+            let rnum = Math.floor(Math.random()*100 +1);
+            //alert(rnum);
+
+            document.getElementById("res").innerHTML += "random숫자: " + rnum + "<br>";
+        }
+        function ranColor(){
+            //let rnum = function(){
+            //    return Math.floor(Math.random()*256); //0~255까지 난수 리턴
+            //}
+            let rnum = () => Math.floor(Math.random()*256);
+            //alert(rnum());
+            document.body.style.backgroundColor = "rgb(" + rnum() + ", " + rnum() + ", " + rnum()+")";
+        }
+    </script>
+</head>
+<body>
+    <h1>Math</h1>
+    <button onclick="mathTest();">버튼</button>
+    <div id="res"></div>
+    <br>
+    <button onclick="ranColor();">랜덤 배경색</button>
+</body>
+</html>

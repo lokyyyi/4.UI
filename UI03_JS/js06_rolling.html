@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        img{
+            width: 300px;
+            height: 300px;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30pt;
+        }
+    </style>
+    <script type="text/javascript">
+        let num =1;
+        
+        function next(){
+            num++;
+            //alert("next");
+            if(num>3){
+                num=1;
+            }
+            document.getElementById("gallery").src = "../sample/image/img0"+num+".jpg";
+            return false;
+        }
+        function prev(){
+            num--;
+            if(num<1){
+                num=3;
+            }
+            document.getElementById("gallery").src = "../sample/image/img0"+num+".jpg";
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryWrap">
+        <p>
+            <a href="" onclick="return prev();">↩️</a>
+            <img src="../sample/image/img01.jpg" id="gallery">
+            <a href="" onclick="return next();">↪️</a>
+        </p>
+    </div>
+    
+</body>
+</html>

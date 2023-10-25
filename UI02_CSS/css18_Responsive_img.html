@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        img{
+            /* 1. width값만 주더라도 브라우저가 원본율을 유지하려하기에 알아서 height값도 변경*/
+            /* width: 200px; */
+
+            /* 2. 부모 너비의 100%. 현재는 body가 부모. 화면에 꽉차는 너비 가지겠다.*/
+            /* width: 100%;* /
+
+            /* 3. max-width: 너비의 최대값 지정하여 그이상 커지지 않게 설정.*/
+            width: 100%;
+            max-width: 800px;
+
+            /* 4. */
+        }
+        div{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <img src="../sample/image/img01.jpg">
+    <div>
+        <img src="../sample/image/img01.jpg">
+    </div>
+    
+</body>
+</html>

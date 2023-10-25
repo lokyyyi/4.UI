@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                let toDay = document.getElementById("today")
+
+                let date = new Date(); //오늘날짜
+
+                toDay.innerHTML += date + "<br>"; //Wed Oct 25 2023 11:32:20 GMT+0900 (한국 표준시)
+                toDay.innerHTML += date.toDateString() + "<br>"; //Wed Oct 25 2023
+                toDay.innerHTML += date.toLocaleDateString() + "<br>"; //2023. 10. 25.
+                toDay.innerHTML += date.toLocaleString() + "<br>"; //2023. 10. 25. 오전 11:32:20
+            };
+            document.getElementsByTagName("button")[1].onclick = testDate;
+        }
+
+        function testDate(){
+            let year = 2022;
+            let month = 3;
+            let day = 14;
+
+            let date = new Date(year, month-1, day);
+            document.getElementById("spec").innerHTML += date + "<br>";
+
+            //
+            document.getElementById("spec").innerHTML += date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()+"/"+
+                                                        date.getDay();
+                                                        //getDay : 요일 0-일~6-토
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>오늘 날짜 출력하기</h1>
+    <span id="today"></span><br>
+    <button>오늘날짜</button>
+    <hr>
+    <h1>특정 날짜 출력하기</h1>
+    <span id="spec"></span><br>
+    <button>특정날짜</button>
+</body>
+</html>

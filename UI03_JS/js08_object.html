@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //객체 생성1
+        function myClass501(){
+            let name = "501호";
+            this.name02="세종대점";
+            this.getName = function(){
+                return name;
+            }
+        }
+        //객체 생성 2
+        const myClass501_2 = {
+            name:"multi",
+            print:function(){
+                alert(myClass501_2.name+": print");
+                return myClass501_2.name;
+            }
+        }
+
+        myClass501.prototype.age=20;
+
+        function objTest(){
+            //function 기반 객체 생성
+            let cls = new myClass501();
+            alert(cls.name02);
+            alert(cls.getName());
+
+            //
+            let cls2 = new myClass501();
+            
+            //cls2.age=20;
+            console.log(cls2.age);
+            console.log(cls.age);
+
+            alert(myClass501_2.name);
+            myClass501_2.print();
+            console.log(cls);
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        객체 : 관련된 데이터와 함수의 집합이다.
+        구성
+        -함수 : 기능
+        -속성 : 객체 내부 데이터
+        -this : 객체 내부의 메소드나 속성을 정의할 때 사용
+        -프로토타입 : rorcp ghkrwkd
+    </pre>
+
+    <button onclick="objTest();">객체</button>
+</body>
+</html>

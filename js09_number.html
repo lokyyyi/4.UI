@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let numberObj = () => {
+            //엘리먼트 탐색 (div태그 선택)
+            let doc = document.getElementsByㄷTagName("div")[0];
+
+            let num = new Number(8);
+            let num02 = 7;
+
+            console.log(num + " : " + typeof num);
+            console.log(num02 + " : " + typeof num02);
+            console.log(num+num02);
+
+            //NaN(Not a Number)
+            doc.innerHTML = "NaN : " + Number.parseInt('A')+"<br>";
+            //infinity
+            doc.innerHTML += "infinity : " + (Infinity/100)+"<br>";
+            //isNaN()
+            console.log(isNaN('a')); //true
+            console.log(isNaN(10)); //false
+
+            let no = window.prompt("숫자입력!!");
+            if(isNaN(no)){
+                doc.innerHTML += "<b style='color: red;'> 숫자가 아닙니다!!!!</b>"
+            }else{
+                doc.innerHTML += "<b style='color: red;'> 숫자입니다!!!!</b>"
+            }
+        }
+    </script>
+</head>
+<body>
+   <pre>
+    1.number 객체
+    -- 정수와 실수를 다루는 객체
+    <button onclick="numberObj();">Number 객체</button>
+   </pre> 
+   <div></div>
+
+</body>
+</html>
