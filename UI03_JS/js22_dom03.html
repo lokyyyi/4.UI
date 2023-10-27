@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imgView, img{
+            width: 300px;
+            height: 350px;
+        }
+    </style>
+    <script type="text/javascript">
+        function createImg(){
+            let radios = document.getElementsByName("rdoBtn");
+            let raidoVal;
+            for(let i=0; i<radios.length; i++){
+                if(radios[i].checked){
+                    radioVal = "../sample/image/"+radios[i].value;
+                    break;
+                }
+            }
+
+            //1. img 태그 생성
+            let img = document.createElement("img");
+            //2. 속성에, radioVal값 넣어주고
+            img.setAttribute("src",radioVal);
+            //3. 현재 화면의 img태그와 생성된 img태그를 바꿔준다. replaceChild();
+            
+            let parent = document.getElementById("imgView");
+            let oldChild = document.querySelector("#imgView>img");
+
+            parent.replaceChild(img,oldChild);
+        }
+        function deleteImg(){
+            let img = document.querySelector("#imgView>img");
+            img.setAttribute("src","");
+
+            let radios = document.getElementsByName("rdoBtn");
+            for(let i=0; i<radios.length; i++){
+                radios[i].checked = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="rdoBtn" value="img01.jpg" id="img01"><label for="img01">그림1</label><br>
+    <input type="radio" name="rdoBtn" value="img02.jpg" id="img02"><label for="img02">그림2</label><br>
+    <input type="radio" name="rdoBtn" value="img03.jpg" id="img03"><label for="img03">그림3</label><br>
+
+    <button onclick="createImg();">이미지 생성하기</button><button  onclick="deleteImg();">이미지 삭제하기</button>
+    
+    <div id="imgView"><img src=""></div>
+</body>
+</html>

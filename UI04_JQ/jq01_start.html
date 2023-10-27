@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. -->
+    <!-- <script type="text/javascript" src="./jquery-3.7.1.js"></script> -->
+    <!-- 2. -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        function highlight(){
+            //id가 list01인 엘리먼트의 자식인 li를 찾아서, 그 중 첫번째 li태그의 배경색을 pink로 바꾸자
+
+            //순수 Javascript 코드
+            //document.getElementById("list01").children[0].style.backgroundColor="pink";
+            
+            //jQuery 코드 - 코드의 간결성
+            //jQuery("#list01>li").eq(0).css("background-color","pink");
+
+            //$("#list01>li").eq(0).css("background-color","pink");
+
+            //----------------------------
+
+            //li태그 전부 배경색 변경
+            //JS
+            // let lis = document.getElementsByTagName("li");
+            // for(let i=0; i<lis.length; i++){
+            //     lis[i].style.backgroundColor="pink";
+            // }
+            //jq
+            $("li").css("background-color","pink");
+            
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- jQuery : 자바스크립트 라이브러리 -->
+    <h1>jQuery 시작</h1>
+    <ul id="list01">
+        <li>1. 셀렉터 표현식</li>
+        <li>2. DOM탁색</li>
+        <li>3. 이벤트</li>
+        <li>4. 이펙트</li>
+        <li>5. Ajax</li>
+    </ul>
+    <button onclick="highlight();">리스트 강조하기</button>
+</body>
+</html>
