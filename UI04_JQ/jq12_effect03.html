@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btn").click(function(){
+                $("img").toggleClass("onoffimg");
+                //+ addClass("클래스명"), removeClass("클래스명")
+            });
+
+            $("img").click(function(){
+                if($(this).hasClass("addsize")){
+                    $(this).removeClass("addsize").attr("title","이미지 축소");
+                }else {
+                    $(this).addClass("addsize").attr("title","이미지 확대");
+                }
+            });
+            //document.getElement~().classList.add('클래스1 클래스2')
+            //document.getElement~().classList.remove('클래스1 클래스2')
+        })
+    </script>
+    <style>
+        .img1{
+            width: 200px;
+            height: 200px;     
+        }
+        .onoffimg{
+            display: none;
+        }
+        .addsize{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">이미지 on/off</button>
+    <br><hr><br>
+    <div>
+        <img src="../sample/image/img01.jpg" title="이미지1번" class="img1">
+        <img src="../sample/image/img02.jpg" title="이미지2번" class="img1">
+        <img src="../sample/image/img03.jpg" title="이미지3번" class="img1">
+    </div>
+</body>
+</html>

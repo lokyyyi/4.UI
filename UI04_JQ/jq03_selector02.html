@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        function test01(){
+            //js : 태그.value
+            //jq : 태그.val()
+            let inputVal = $("input:text").val();
+            $("#res").html(inputVal);
+        }
+        function test02(){
+            let inputVal = $("input:radio").val();
+            $("#res").html(inputVal);
+        }
+        function test03(){
+            let inputVal = $("input:checkbox").val();
+            $("#res").html(inputVal);
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <input type="button" value="선택" onclick="test01();">
+        <br>
+        <input type="radio" value="23/09/11~" onclick="test02();">23년9월11일
+        <br>
+        <input type="checkbox" value="웹 서비스 개발자 취업캠프" onclick="test03();">취업캠프
+    </form>
+    <div id="res"></div>
+</body>
+</html>

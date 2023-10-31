@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            //.hover() : 마우스를 특정 엘리먼트 위에 올리면 발생하게 되는 이벤트
+            $(".menu").hover(function(){
+                $(this).children("div").show();
+            },function(){
+                $(this).children("div").hide();
+            });
+
+            
+        });
+    </script>
+    <style>
+        .menu{
+            width: 150px;
+            background-color: pink;
+            position: absolute;
+        }
+        #menu2{left: 170px;}
+        #menu3{left: 330px;}
+        a{text-decoration: none;}
+        .menu div{display: none;}
+    </style>
+</head>
+<body>
+    <b>dom 탐색</b>
+    <br>
+    <div id="menu1" class="menu">
+        <a href="jq05_dom01.html">필터링</a>
+        <div>.eq()</div>
+        <div>.slice()</div>
+        <div>.first()</div>
+        <div>.last()</div>
+    </div>
+    <div id="menu2" class="menu">
+        <a href="jq06_dom02.html">트리탐색</a>
+        <div>.find()</div>
+        <div>.children()</div>
+        <div>.parent()</div>
+        <div>.parents()</div>
+        <div>.next()</div>
+    </div>
+    <div id="menu3" class="menu">
+        <a href="jq07_dom03.html">기타</a>
+        <div>.add()</div>
+        <div>.is()</div>
+    </div>
+</body>
+</html>

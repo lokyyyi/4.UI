@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 10px;
+            padding: 10px;
+            width: 50%;
+            background-color: coral;
+        }
+        fieldset{
+            width: 45%;
+            text-align: center;
+            background-color: darkgrey;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>연습 3</h1>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요</legend>
+        <input type="radio">제목 <input type="radio">날짜 <input type="radio">작성자
+    </fieldset>
+    <hr>
+    <div>
+        검색할 제목을 입력하세요 : <input type="text" style="width: 60%;"> <input type="button" value="검색">
+    </div>
+    <div>
+        검색할 날짜를 선택하세요 : <input type="date"> - <input type="date"> <input type="button" value="검색">
+    </div>
+    <div>
+        검색할 작성자 아이디를 입력하세요 :
+        <input type="text" style="width: 45%"> <input type="button" value="검색">
+    </div>
+</body>
+</html>

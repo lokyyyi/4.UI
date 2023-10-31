@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function test01(){
+            let par = document.getElementById("m1");
+            if(isNaN(par.value)){
+                alert("숫자가 아닙니다.")
+            }else{
+                alert("숫자입니다.")
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>문제 1</legend>
+        <p>input 태그에 값을 입력하고 버튼을 클릭하였을 때, 값이 숫자인지 아닌지 출력해 주세요.</p>
+        <pre>(값이 숫자라면 : "숫자입니다." 숫자가 아니라면 "숫자가 아닙니다."를 alert로 출력)</pre>
+        <input type="text" id="m1"><button onclick="test01();">판별</button>
+    </fieldset>
+    <fieldset>
+        <legend>문제 2</legend>
+        <p>input 태그에 이름을 입력하고 버튼을 클릭하였을 때, 해당 이름이 존재하는지 여부를 출력해 주세요.</p>
+        <pre>(이름이 있으면 : "이름이있습니다." 없으면 "이름이 없습니다." 를 alert로 출력)</pre>
+        <input type="text" id="m2"><button onclick="test02();">판별</button>
+        <p id="m02">홍길동 이순신 김선달 유재석 강호동</p>
+    </fieldset>
+</body>
+</html>
